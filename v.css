@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent; /* Removes blue flash on touch */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffebee;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents bouncing on mobile */
+}
+
+.screen {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden { display: none !important; }
+
+.card {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 350px; /* Perfect for phone width */
+    text-align: center;
+}
+
+h1 { 
+    color: #d32f2f; 
+    font-size: 1.8rem; /* Smaller for mobile screens */
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 15px;
+    border: 2px solid #ff4081;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 16px; /* Prevents iOS from zooming in on input */
+}
+
+button {
+    background: #ff4081;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 100%; /* Full width buttons for thumbs */
+}
+
+.btn-container {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Space for the button to jump around */
+}
+
+#noBtn {
+    background: #9e9e9e;
+    position: absolute;
+    width: auto; /* No button stays smaller */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* THE GIF FIX FOR MOBILE */
+.photo-grid img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border: 5px solid white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}

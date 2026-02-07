@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>For My Favorite Person</title>
+    <link rel="stylesheet" href="v.css">
+</head>
+<body>
+
+    <div id="login-screen" class="screen">
+        <div class="card">
+            <h2>🔒 Restricted Access</h2>
+            <p>Enter the secret password</p>
+            <input type="password" id="passwordField" placeholder="Password: 'love'">
+            <button onclick="checkLogin()">Unlock</button>
+            <p id="error-msg" class="hidden">Incorrect key! ❤️</p>
+        </div>
+    </div>
+
+    <div id="question-screen" class="screen hidden">
+        <h1>Will you be my Valentine?</h1>
+        <div class="btn-container">
+            <button id="yesBtn" onclick="showGallery()">YES!</button>
+            <button id="noBtn" ontouchstart="runAway()" onmouseover="runAway()">NO</button>
+        </div>
+    </div>
+
+    <div id="gallery-screen" class="screen hidden">
+        <h1>Yay! I love you! ❤️</h1>
+        <div class="photo-grid">
+            <img src="valentine.gif" alt="Valentine GIF">
+        </div>
+    </div>
+
+    <script src="v.js"></script>
+</body>
+</html>
